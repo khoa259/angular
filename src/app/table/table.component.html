@@ -19,7 +19,10 @@
         <td>{{teacher.gender ? 'Nam': 'Nữ'}}</td>
 
         <td>
-          <img [src]="teacher.avatar" width="100" alt="">
+            <app-table-avatar 
+              [src] = "teacher.avatar"
+              [age] = "teacher.age">
+            </app-table-avatar>
         </td>
         <td>
           <span *ngIf="teacher.status === 1">Đang làm việc</span>
