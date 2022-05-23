@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
+  @Input() users:any;
 
-  constructor() { }
+  @Output() handleDelete: EventEmitter<number> 
+  @Output() handleEdit : EventEmitter<number>
+  constructor() { 
+    this.handleDelete = new EventEmitter()
+    this. handleEdit =  new EventEmitter()
+  }
 
   ngOnInit(): void {
   }
+ 
 
+  onEdit(userId: number){
+    this.handleEdit.emit(userId)
+  }
+  onDelete(userId:number){
+    this.handleDelete.emit(userId)
+  }
 }

@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
 import { UserListComponent } from './user/user-list/user-list.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { UserListComponent } from './user/user-list/user-list.component';
     FormComponent,
     UserFormComponent,
     UserListComponent,
+    UserComponent,
    
     
   ],
