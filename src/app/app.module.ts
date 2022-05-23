@@ -13,6 +13,7 @@ import { TableAvatarComponent } from './table/table-avatar/table-avatar.componen
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { FormComponent } from './form/form.component';
     TableNameComponent,
     TableAvatarComponent,
     FormComponent,
+   
     
   ],
   imports: [
