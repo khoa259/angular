@@ -13,10 +13,11 @@ export class UserListComponent implements OnInit {
   @Output() handleEdit : EventEmitter<number>
   constructor() { 
     this.handleDelete = new EventEmitter()
-    this. handleEdit =  new EventEmitter()
+    this.handleEdit =  new EventEmitter()
   }
 
   ngOnInit(): void {
+
   }
  
 
@@ -25,5 +26,6 @@ export class UserListComponent implements OnInit {
   }
   onDelete(userId:number){
     this.handleDelete.emit(userId)
+    
   }
 }

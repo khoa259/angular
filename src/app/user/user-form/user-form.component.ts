@@ -21,6 +21,7 @@ export class UserFormComponent implements OnInit {
 
   
   onSubmit(userForm : NgForm){
+   console.log(userForm);
    
     //3 gửi dữ liệu đi
     this.handleSubmit.emit(userForm.value)

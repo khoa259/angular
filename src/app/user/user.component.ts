@@ -16,9 +16,8 @@ export class UserComponent implements OnInit {
     id : 0,
     name: '',
     age: 0,
-
+    email: ''
   };
-
 
   users= [
     {
@@ -41,16 +40,45 @@ export class UserComponent implements OnInit {
     }
   ];
 
-  onParentSubmit(formData: NgForm ){
+  onParentSubmit(formData: any ){
     const UserIdS = this.users.map(user => user.id).sort((a,b) => a-b)
       console.log(UserIdS);
       const newId = UserIdS[UserIdS.length-1];
-    this.users.push({
-      ...formData.value,
-      id :newId + 1
-    });
-    console.log('Parent FormData', formData);
+
+    if( this.formValues.id == 0 ){
+      this.users.push({
+        ...formData,
+        id:newId+1
+        
+      });
+      console.log('Parent FormData', formData);
+    }else{
+      const idx = this.users.findIndex((user) => user.id === this.formValues.id);
+      if (idx > -1) {
+        this.users[idx] = {
+          ...formData,
+          id: this.formValues.id
+        };
+      }
+    }
     
-  }
+  };
+
+  onParentDelete (userId:number) {
+    const alert = window.confirm("bạn có muốn xóa không")
+    if(alert){
+      this.users = this.users.filter(user => user.id !== userId) 
+    }
+  };
+
+  onParentEdit(userId: number) {
+    // 1. Tìm xem đâu là user được chỉnh sửa
+    const editUser = this.users.find(user => user.id === userId);
+
+    if (editUser) {
+      return this.formValues = {...editUser};
+    }
+    return alert('Không tìm thấy user đó!');
+  };
 
 }

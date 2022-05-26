@@ -2,6 +2,9 @@
     (handleSubmit) = "onParentSubmit($event)"
     [inputValues]="formValues"
 ></app-user-form>
-<app-user-list [users] = "users"></app-user-list>
-
+<app-user-list 
+[users] = "users"
+(handleDelete) = "onParentDelete($event)"
+(handleEdit)="onParentEdit($event)"
+></app-user-list>
 
