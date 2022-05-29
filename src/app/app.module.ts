@@ -15,6 +15,9 @@ import { FormComponent } from './form/form.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserComponent } from './user/user.component';
+import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
+import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -29,6 +32,9 @@ import { UserComponent } from './user/user.component';
     UserFormComponent,
     UserListComponent,
     UserComponent,
+    ClientLayoutComponent,
+    HomeComponent,
+    AdminComponent,
    
     
   ],

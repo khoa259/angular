@@ -1,80 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <div class="container">
-      <app-user></app-user>
-      <div>
-        <!-- <h1>Angular Forms</h1>
-        <app-form></app-form> -->
-          
-        </div>
-        
-        
-        <h1>Thêm người dùng</h1>
-        
-        <!-- <form action="">
-          <div class="form-group">
-          <label for="">Tên </label>
-          <input
-            type="text"
-            class="form-control"
-            (input)="onInput($event, 'name')"
-            [value]="inputValues.name"
-          >
-        </div>
-        <div class="form-group">
-          <label for="">Tuổi </label>
-          <input
-            type="number"
-            class="form-control"
-            (input)="onInput($event, 'age')"
-            [value]="inputValues.age"
-          >
-        </div>
-        <div class="form-group">
-          <label for="">Ảnh </label>
-          <input
-            type="text"
-            class="form-control"
-            (input)="onInput($event, 'avatar')"
-            [value]="inputValues.avatar"
-          >
-        </div>
-        <div class="form-group">
-          <label for="">Giới tính </label>
-          <input
-            type="radio"
-            class="form-check"
-            (input)="onInput($event, 'gender')"
-            [checked]="inputValues.gender === '1'"
-            [value]="1"
-          >Nam
-          <input
-            type="radio"
-            class="form-check"
-            (input)="onInput($event, 'gender')"
-            [checked]="inputValues.gender === '0'"
-            [value]="0"
-          >Nữ
-        </div>
-        <div>
-          <button type="button" (click)="onSubmit()" class="btn btn-success">
-            Submit
-          </button>
-        </div>
-      </form> -->
-
-      
-      <h1>Danh Sách User</h1>
-     <app-table [user]="teachers" ></app-table>
-      Tên Sv: <app-name [name] = "studentName" ></app-name>  <br>
-      Mã Sv: <app-identity [id] = "studentId" ></app-identity>
-    </div>
+    <!-- <h1>Router</h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/user">User</a></li>
+        <li><a routerLink="/admin">ADMIN</a></li>
+      </ul>
+    </nav> -->
+    <router-outlet></router-outlet>
+    <!-- <footer>
+      <h3>footer</h3>
+    </footer> -->
+  </div>
 </body>
+
 </html>
