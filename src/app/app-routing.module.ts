@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
-import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
-import { UserFormComponent } from './user/user-form/user-form.component';
 import { UserComponent } from './user/user.component';
+import { AdminProdutListComponent } from './pages/admin/admin-produt-list/admin-produt-list.component';
+import { AdminProdutFormComponent } from './pages/admin/admin-produt-form/admin-produt-form.component';
+import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 
 const routes: Routes = [
   {
@@ -26,21 +27,43 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    component:AdminComponent,
+    component:AdminLayoutComponent,
     children : [
       {
         path :'',
-        redirectTo: 'user',
+        redirectTo: 'products',
         pathMatch:'full',
       
       },
       {
         path:'user',
         component: UserComponent
+      },
+      {
+        path:'products',
+        children: [
+          {
+            path:'',
+            component:AdminProdutListComponent
+            
+          },
+          {
+            path:'create',
+            component: AdminProdutFormComponent
+            
+          },
+          {
+            path:'edit/:id',
+            component: AdminProdutFormComponent
+          },
+          {
+            path:':id',
+            component:AdminProdutListComponent
+          }
+        ]
       }
+
     ]
-    
-    
   }
   // redirectTo: 'user',
   // pathMatch: 'full',

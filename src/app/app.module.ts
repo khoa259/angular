@@ -17,10 +17,11 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserComponent } from './user/user.component';
 import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
 import { HomeComponent } from './home/home.component';
-import { AdminComponent } from './admin/admin.component';
 import { PagesComponent } from './pages/pages.component';
 import { AdminProductComponent } from './pages/admin/admin-product/admin-product.component';
 import { AdminProdutFormComponent } from './pages/admin/admin-produt-form/admin-produt-form.component';
+import { AdminProdutListComponent } from './pages/admin/admin-produt-list/admin-produt-list.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 
 
 @NgModule({
@@ -37,10 +38,11 @@ import { AdminProdutFormComponent } from './pages/admin/admin-produt-form/admin-
     UserComponent,
     ClientLayoutComponent,
     HomeComponent,
-    AdminComponent,
     PagesComponent,
     AdminProductComponent,
     AdminProdutFormComponent,
+    AdminProdutListComponent,
+    AdminLayoutComponent,
    
     
   ],
