@@ -18,6 +18,9 @@ import { UserComponent } from './user/user.component';
 import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { PagesComponent } from './pages/pages.component';
+import { AdminProductComponent } from './pages/admin/admin-product/admin-product.component';
+import { AdminProdutFormComponent } from './pages/admin/admin-produt-form/admin-produt-form.component';
 
 
 @NgModule({
@@ -35,6 +38,9 @@ import { AdminComponent } from './admin/admin.component';
     ClientLayoutComponent,
     HomeComponent,
     AdminComponent,
+    PagesComponent,
+    AdminProductComponent,
+    AdminProdutFormComponent,
    
     
   ],
