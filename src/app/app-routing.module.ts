@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import { AdminProdutListComponent } from './pages/admin/admin-produt-list/admin-produt-list.component';
-import { AdminProdutFormComponent } from './pages/admin/admin-produt-form/admin-produt-form.component';
 import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
-
+import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
+import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
+import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
 const routes: Routes = [
   {
     path: '',
@@ -30,35 +30,23 @@ const routes: Routes = [
     component:AdminLayoutComponent,
     children : [
       {
-        path :'',
-        redirectTo: 'products',
-        pathMatch:'full',
-      
-      },
-      {
-        path:'user',
-        component: UserComponent
-      },
-      {
         path:'products',
         children: [
           {
             path:'',
-            component:AdminProdutListComponent
-            
+            component:AdminProductListComponent
           },
           {
             path:'create',
-            component: AdminProdutFormComponent
-            
+            component: AdminProductFormComponent
           },
           {
-            path:'edit/:id',
-            component: AdminProdutFormComponent
+            path:'edit/:_id',
+            component: AdminProductFormComponent
           },
           {
-            path:':id',
-            component:AdminProdutListComponent
+            path:':_id',
+            component:AdminProductDetailComponent
           }
         ]
       }
