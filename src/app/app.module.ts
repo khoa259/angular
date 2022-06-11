@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NameComponent } from './name/name.component';
 
 
 import { FormsModule } from '@angular/forms';
@@ -26,7 +24,6 @@ import { BannerComponent } from './pages/client/banner/banner.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NameComponent,
     FormComponent,
     ClientLayoutComponent,
     AdminLayoutComponent,

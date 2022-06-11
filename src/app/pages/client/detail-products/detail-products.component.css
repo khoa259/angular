@@ -1,7 +1,9 @@
 body{margin-top:20px;
     background:#eee;
     }
-    
+    .container{
+        margin:5rem 8rem;
+    }
     /*panel*/
     .panel {
         border: none;

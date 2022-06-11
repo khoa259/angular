@@ -14,13 +14,13 @@ export class ProductService {
   getProducts(): Observable<Product[]>  {
     return this.http.get<Product[]>(environment.products);
   }
-  getProduct (_id: string): Observable<Product> {
+  getProduct (_id: string | number): Observable<Product> {
     return this.http.get<Product>(`${environment.products}/${_id}`);
   }
   createProduct (data: ProductCreate): Observable<Product> {
     return this.http.post<Product>(`${environment.products}`, data);
   }
-  deleteProduct (_id: number|string): Observable<any> {
+  deleteProduct (_id: string | number): Observable<any> {
     return this.http.delete(`${environment.products}/${_id}`);
   }
   updateProduct(_id:string, data: ProductCreate): Observable<Product>{

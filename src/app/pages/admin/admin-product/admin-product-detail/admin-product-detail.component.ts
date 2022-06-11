@@ -16,7 +16,10 @@ export class AdminProductDetailComponent implements OnInit {
   ) {
     this.product = {
       _id: '',
-      name: ''
+      name: '',
+      price: 0,
+      img : '',
+      desc: ''
     };
   }
 

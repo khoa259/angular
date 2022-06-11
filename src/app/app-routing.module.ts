@@ -18,15 +18,15 @@ const routes: Routes = [
         path: '',
         component: HomePageComponent,
       },
-      // {
-      //   path: 'products',
-      //   children: [
-      //     {
-      //       path :':_id',
-      //       component: DetailProductsComponent
-      //     }
-      //   ]
-      // },
+      {
+        path: 'products',
+        children: [
+          {
+            path :':_id',
+            component: DetailProductsComponent
+          }
+        ]
+      },
       {
         path: 'about',
         component: AboutPageComponent

@@ -28,7 +28,7 @@ export class AdminProductListComponent implements OnInit {
     });
   }
 
-  onDelete(_id: string | number) {
+  onDelete(_id: string | number ) {
     // confirm
     const confirmDelete = confirm('Bạn có chắc chắn xoá không?');
     // kiểm tra dữ liệu => xoá
