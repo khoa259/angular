@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { UserComponent } from './user/user.component';
-import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
+import { DetailProductsComponent } from './pages/client/detail-products/detail-products.component';
+import { AboutPageComponent } from './pages/client/about-page/about-page.component';
+import { HomePageComponent } from './pages/client/home-page/home-page.component';
+import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
 const routes: Routes = [
   {
     path: '',
@@ -15,14 +16,22 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent
-
+        component: HomePageComponent,
       },
+      // {
+      //   path: 'products',
+      //   children: [
+      //     {
+      //       path :':_id',
+      //       component: DetailProductsComponent
+      //     }
+      //   ]
+      // },
       {
-        path: 'user',
-        component: UserComponent
-      
+        path: 'about',
+        component: AboutPageComponent
       }
+     
     ]
   },
   {
