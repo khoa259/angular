@@ -8,6 +8,9 @@ import { DetailProductsComponent } from './pages/client/detail-products/detail-p
 import { AboutPageComponent } from './pages/client/about-page/about-page.component';
 import { HomePageComponent } from './pages/client/home-page/home-page.component';
 import { ClientLayoutComponent } from './layout/client-layout/client-layout.component';
+import { CartComponent } from './pages/client/cart/cart.component';
+import { ListProductComponent } from './pages/client/list-product/list-product.component';
+import { ContactFormComponent } from './pages/client/contact-form/contact-form.component';
 const routes: Routes = [
   {
     path: '',
@@ -20,12 +23,21 @@ const routes: Routes = [
       },
       {
         path: 'products',
+        component: ListProductComponent,
         children: [
           {
             path :':_id',
             component: DetailProductsComponent
           }
         ]
+      },
+      {
+        path: 'contact',
+        component: ContactFormComponent ,
+      },
+      {
+        path: 'cart',
+        component: CartComponent
       },
       {
         path: 'about',

@@ -19,6 +19,8 @@ import { HomePageComponent } from './pages/client/home-page/home-page.component'
 import { DetailProductsComponent } from './pages/client/detail-products/detail-products.component';
 import { AboutPageComponent } from './pages/client/about-page/about-page.component';
 import { BannerComponent } from './pages/client/banner/banner.component';
+import { ListProductComponent } from './pages/client/list-product/list-product.component';
+import { ContactFormComponent } from './pages/client/contact-form/contact-form.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { BannerComponent } from './pages/client/banner/banner.component';
     DetailProductsComponent,
     AboutPageComponent,
     BannerComponent,
+    ListProductComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
