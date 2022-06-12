@@ -11,6 +11,8 @@ import { ClientLayoutComponent } from './layout/client-layout/client-layout.comp
 import { CartComponent } from './pages/client/cart/cart.component';
 import { ListProductComponent } from './pages/client/list-product/list-product.component';
 import { ContactFormComponent } from './pages/client/contact-form/contact-form.component';
+import { SignInComponent } from './pages/client/auth/sign-in/sign-in.component';
+import { SignUpComponent } from './pages/client/auth/sign-up/sign-up.component';
 const routes: Routes = [
   {
     path: '',
@@ -23,13 +25,16 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        component: ListProductComponent,
         children: [
           {
             path :':_id',
-            component: DetailProductsComponent
+            component: DetailProductsComponent,
           }
         ]
+      },
+      {
+        path:'category',
+        component: ListProductComponent,
       },
       {
         path: 'contact',
@@ -42,8 +47,15 @@ const routes: Routes = [
       {
         path: 'about',
         component: AboutPageComponent
-      }
-     
+      },
+      {
+        path :'signin',
+        component: SignInComponent
+      },
+      {
+        path :'signup',
+        component: SignUpComponent
+      },
     ]
   },
   {

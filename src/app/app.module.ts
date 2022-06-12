@@ -21,6 +21,9 @@ import { AboutPageComponent } from './pages/client/about-page/about-page.compone
 import { BannerComponent } from './pages/client/banner/banner.component';
 import { ListProductComponent } from './pages/client/list-product/list-product.component';
 import { ContactFormComponent } from './pages/client/contact-form/contact-form.component';
+import { AuthComponent } from './pages/client/auth/auth.component';
+import { SignInComponent } from './pages/client/auth/sign-in/sign-in.component';
+import { SignUpComponent } from './pages/client/auth/sign-up/sign-up.component';
 
 
 @NgModule({
@@ -39,6 +42,9 @@ import { ContactFormComponent } from './pages/client/contact-form/contact-form.c
     BannerComponent,
     ListProductComponent,
     ContactFormComponent,
+    AuthComponent,
+    SignInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
