@@ -24,6 +24,7 @@ import { ContactFormComponent } from './pages/client/contact-form/contact-form.c
 import { AuthComponent } from './pages/client/auth/auth.component';
 import { SignInComponent } from './pages/client/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/client/auth/sign-up/sign-up.component';
+import { Error404Component } from './pages/error404/error404.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { SignUpComponent } from './pages/client/auth/sign-up/sign-up.component';
     AuthComponent,
     SignInComponent,
     SignUpComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,

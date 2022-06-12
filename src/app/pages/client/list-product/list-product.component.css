@@ -1,9 +1,17 @@
 .my-8{
     margin: 5rem 8rem ;
 }
-
-.cart .cart-img {
-    width: 260px;
-    height: 260px;
+.card{
+    margin-top: 10px;
+}
+ .card-img {
+    width: 250px;
+    height: 250px;
     object-fit: cover;
+}
+.card-text{
+    white-space: nowrap; 
+    width: 200px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

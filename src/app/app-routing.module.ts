@@ -13,6 +13,7 @@ import { ListProductComponent } from './pages/client/list-product/list-product.c
 import { ContactFormComponent } from './pages/client/contact-form/contact-form.component';
 import { SignInComponent } from './pages/client/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/client/auth/sign-up/sign-up.component';
+import { Error404Component } from './pages/error404/error404.component';
 const routes: Routes = [
   {
     path: '',
@@ -85,7 +86,17 @@ const routes: Routes = [
       }
 
     ]
+  },
+  {
+    path : '404',
+    component: Error404Component,
+  },
+  {
+    path: '**',
+    redirectTo: '404'
   }
+
+
   // redirectTo: 'user',
   // pathMatch: 'full',
 ];
