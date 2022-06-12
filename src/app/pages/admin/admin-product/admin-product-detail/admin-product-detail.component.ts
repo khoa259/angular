@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/service/product.service';
 import { Product } from 'src/app/type/product';
 @Component({
@@ -12,14 +12,16 @@ export class AdminProductDetailComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private activateRoute: ActivatedRoute
+    private activateRoute: ActivatedRoute,
+    private router: Router
   ) {
     this.product = {
       _id: '',
       name: '',
       price: 0,
       img : '',
-      desc: ''
+      desc: '',
+      salePrice: ''
     };
   }
 
@@ -33,4 +35,19 @@ export class AdminProductDetailComponent implements OnInit {
     })
   }
 
+  redirectTolist() {
+    this.router.navigateByUrl('/admin/books')
+  }
+  onDelete(_id: string | number ) {
+    // confirm
+    const confirmDelete = confirm('Bạn có chắc chắn xoá không?');
+    // kiểm tra dữ liệu => xoá
+    if (confirmDelete && _id) {
+      this.productService.deleteProduct(_id).subscribe((data) => {
+        // Cập nhật lại danh sách
+        this.redirectTolist();
+      })
+    }
+
+  }
 }

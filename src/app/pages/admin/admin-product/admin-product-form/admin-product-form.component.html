@@ -4,9 +4,42 @@
         <input type="text" class="form-control" formControlName ="name">
     </div>
     <app-show-validate
-        [field] = "productForm.get('name')"
-        key="Tên Sản Phẩm"
+    [field] = "productForm.get('name')"
+    key="Tên Sản Phẩm"
     ></app-show-validate>
+    <div class="form-group">
+        <label for="">Image</label>
+        <input type="text" class="form-control" formControlName ="image">
+    </div>
+    <app-show-validate
+    [field] = "productForm.get('image')"
+    key="Ảnh"
+    ></app-show-validate>
+    <div class="form-group">
+        <label for="">Price</label>
+        <input type="number" min="1" class="form-control" formControlName ="price">
+    </div>
+    <app-show-validate
+    [field] = "productForm.get('price')"
+    key="Giá sản phẩm"
+    ></app-show-validate>
+    <div class="form-group">
+        <label for="">Sale</label>
+        <input type="number" class="form-control" formControlName ="salePrice">
+    </div>
+    <app-show-validate
+    [field] = "productForm.get('salePrice')"
+    key="Giá"
+    ></app-show-validate>
+    <div class="form-group">
+        <label for="">Description</label>
+        <textarea class="form-control" name="" id="" cols="30" rows="10" formControlName ="desc"></textarea>
+    </div>
+    <app-show-validate
+    [field] = "productForm.get('desc')"
+    key="Mô tả sản phẩm"
+    ></app-show-validate>
+    
     <div>
         <button 
             class="btn btn-success"

@@ -64,7 +64,7 @@ const routes: Routes = [
     component:AdminLayoutComponent,
     children : [
       {
-        path:'products',
+        path:'books',
         children: [
           {
             path:'',

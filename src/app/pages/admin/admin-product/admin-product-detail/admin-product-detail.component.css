@@ -1,0 +1,9 @@
+.white-box img {
+    width: 430px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.card-title{
+    text-transform: uppercase;
+}

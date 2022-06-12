@@ -19,7 +19,8 @@ export class DetailProductsComponent implements OnInit {
       name: '',
       price: 0,
       img : '',
-      desc: ''
+      desc: '',
+      salePrice: ''
     };
   }
 

@@ -1,19 +1,29 @@
-<a routerLink="/admin/products/create"><button type="button" class="btn btn-primary">Thêm mới</button></a>
+<a routerLink="/admin/books/create"><button type="button" class="btn btn-primary">Thêm mới</button></a>
 <table class="table table-hover">
     <thead>
       <tr>
         <th>ID</th>
         <th>Name</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Sale Price</th>
+        <th>Description</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of products">
-        <td>{{product._id}}</td>
+      <tr *ngFor="let product of products, let i=index">
+        <td>{{i+1}}</td>
         <td>{{product.name}}</td>
         <td>
-          <a routerLink="/admin/products/{{product._id}}">Detail</a>
-          <a routerLink="/admin/products/edit/{{product._id}}">
+          <img src={{product.img}} alt="" class="listImg">
+        </td>
+        <td>{{product.price}}</td>
+        <td>{{product.salePrice}}</td>
+        <td class="listDesc"> {{product.desc}}</td>
+        <td>
+          <a routerLink="/admin/books/{{product._id}}">Detail</a>
+          <a routerLink="/admin/books/edit/{{product._id}}">
             <button class="btn btn-warning">Edit</button>
           </a>
           <button class="btn btn-danger" (click)="onDelete(product._id)">Delete</button>

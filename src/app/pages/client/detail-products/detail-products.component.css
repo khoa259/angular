@@ -2,7 +2,7 @@ body{margin-top:20px;
     background:#eee;
     }
     .container{
-        margin:5rem 8rem;
+        margin-top: 3rem;
     }
     /*panel*/
     .panel {
@@ -11,6 +11,7 @@ body{margin-top:20px;
     }
     .panel-body{
         display: flex;
+      
     }
     .panel-heading {
         border-color:#eff2f7 ;

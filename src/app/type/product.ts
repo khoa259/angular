@@ -4,7 +4,12 @@ export type Product = {
     price:number,
     img: string,
     desc: string,
+    salePrice:string
 };
 export type ProductCreate = {
-    name: string
+    name: string,
+    img: string,
+    price:number,
+    salePrice: string
+    desc: string,
 };
