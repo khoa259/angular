@@ -1,0 +1,23 @@
+<a routerLink="/admin/category/create"><button type="button" class="btn btn-primary">Thêm mới</button></a>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cate of categories, let i=index">
+        <td>{{i+1}}</td>
+        <td>{{cate.name}}</td>
+        <td>
+          <a routerLink="/admin/category/edit/{{cate._id}}">
+            <button class="btn btn-warning">Edit</button>
+          </a>
+          <button class="btn btn-danger" (click)="onDelete(cate._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

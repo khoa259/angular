@@ -14,6 +14,8 @@ import { ContactFormComponent } from './pages/client/contact-form/contact-form.c
 import { SignInComponent } from './pages/client/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/client/auth/sign-up/sign-up.component';
 import { Error404Component } from './pages/error404/error404.component';
+import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
 const routes: Routes = [
   {
     path: '',
@@ -83,10 +85,26 @@ const routes: Routes = [
             component:AdminProductDetailComponent
           }
         ]
-      }
+      },
+      {
+        path:'category',
+        component: AdminCategoryListComponent,
+        children: [
+          {
+            path: 'create',
+            component: AdminCategoryFormComponent
+          },
+          {
+            path: 'edit/:_id',
+            component: AdminCategoryFormComponent
+          },
+         
+        ]
+      },
 
     ]
   },
+  
   {
     path : '404',
     component: Error404Component,

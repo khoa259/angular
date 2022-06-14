@@ -68,7 +68,7 @@ export class AdminProductFormComponent implements OnInit {
     console.log(this.productForm.value);
     // 1. nhận dữ liệu từ form => this.productForm.value
     const data = this.productForm.value;
-    console.log('sản phẩm' , data);
+    // console.log('sản phẩm' , data);
     
 
     if(this.productId !== '' && this.productId !== undefined){

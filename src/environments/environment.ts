@@ -4,7 +4,8 @@
 const apiUrl = "http://localhost:8000/api"
 export const environment = {
   production: false,
-  products: `${apiUrl}/books`
+  products: `${apiUrl}/books`,
+  categories: `${apiUrl}/category`
 };
 
 /*
