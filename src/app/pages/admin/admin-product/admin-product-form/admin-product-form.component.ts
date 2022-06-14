@@ -23,7 +23,7 @@ export class AdminProductFormComponent implements OnInit {
         Validators.minLength(6),
         Validators.maxLength(32),
       ]),
-      image: new FormControl( '', [
+      img: new FormControl( '', [
         Validators.required,
       ]),
       price: new FormControl('' ,[
@@ -75,10 +75,9 @@ export class AdminProductFormComponent implements OnInit {
       return this.productService.updateProduct(this.productId, data).subscribe(data => {
         this.redirectTolist()
       })
-    }
+    };
     return this.productService.createProduct(data).subscribe((data) => {
-      // this.redirectTolist()
-      console.log(data);
+      this.redirectTolist()
     })
   }  
 
