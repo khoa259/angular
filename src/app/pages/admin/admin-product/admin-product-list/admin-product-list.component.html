@@ -1,4 +1,4 @@
-<a routerLink="/admin/books/create"><button type="button" class="btn btn-primary">Thêm mới</button></a>
+<a routerLink="/admin/products/create"><button type="button" class="btn btn-primary">Thêm mới</button></a>
 <table class="table table-hover">
     <thead>
       <tr>
@@ -22,8 +22,8 @@
         <td>{{product.salePrice}}</td>
         <td class="listDesc"> {{product.desc}}</td>
         <td>
-          <a routerLink="/admin/books/{{product._id}}">Detail</a>
-          <a routerLink="/admin/books/edit/{{product._id}}">
+          <a routerLink="/admin/products/{{product._id}}">Detail</a>
+          <a routerLink="/admin/boproductsks/edit/{{product._id}}">
             <button class="btn btn-warning">Edit</button>
           </a>
           <button class="btn btn-danger" (click)="onDelete(product._id)">Delete</button>

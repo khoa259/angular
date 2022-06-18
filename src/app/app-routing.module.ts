@@ -66,7 +66,7 @@ const routes: Routes = [
     component:AdminLayoutComponent,
     children : [
       {
-        path:'books',
+        path:'products',
         children: [
           {
             path:'',
@@ -88,8 +88,11 @@ const routes: Routes = [
       },
       {
         path:'category',
-        component: AdminCategoryListComponent,
         children: [
+          {
+            path:'',
+            component: AdminCategoryListComponent
+          },
           {
             path: 'create',
             component: AdminCategoryFormComponent
